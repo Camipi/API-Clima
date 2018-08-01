@@ -15,7 +15,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
 	<!-- JS -->
-	<script src="../src/js/app.js"></script>
+	<script src="js/app.js"></script>
 
 	<!-- SWEET ALERT -->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -27,27 +27,36 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 		<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA_m00gCN3it7ADJYxXIpX8tVAZGzwnbo&callback=initMap">
+</script>
+
 </head>
 <body>
 	
-	<div class="container">
-		<h1 class="text-center">API | Clima</h1>
-		<div class="row">
-			<div class="col-md-8">
-		    	<div id="map"></div>
-		    </div>
-		    <div class="col-md-4">
-				<div class="form-group">
-					<select name="" id="">
-						<option value="Santiago">Santiago</option>
-						<option value="arica">Arica</option>
-						<option value="isla">Isla de Pascua</option>
-					</select>
-				</div>	
-			</div>		
+	<div class="row">
+		<div class="col-md-6">
+	    	<div id="map">
+	    		<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13318.221379797624!2d-70.6244738802246!3d-33.434835249999985!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1533081743741" width="50%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+	    	</div>
+	    </div>
+	    <div class="col-md-6">
+	    	<h1 class="text-center title">API | Clima</h1>
+			<div class="container form-group">
+				<select class="form-control" name="" id="select">
+					<option>Seleccione una ubicación:</option>
+					<option value="Santiago">Santiago</option>
+					<option value="arica">Arica</option>
+					<option value="isla">Isla de Pascua</option>
+				</select>
+			</div>	
 		</div>
+		<h1 id="resumen" class="text-center"></h1>
+	    <div class="col-md-offset-3 col-md-6">
+	    	<img src="" class="img-responsive">
+	    </div>		
 	</div>
-
+		
 </body>
 </html>
